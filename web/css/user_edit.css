@@ -1,0 +1,159 @@
+body
+{
+    background-image: linear-gradient(90deg, white, lightblue);
+}
+.user
+{
+	font-weight: bold;
+	font-size: 200%;
+}
+.todolist
+{
+
+	width:100%;
+}
+.appoint
+{
+	
+	border:1px solid black;
+}
+.time
+{
+	text-align:center;
+}
+.a
+{
+	border:1px solid black;
+	padding:2%;
+}
+.buttons
+{
+    margin-left:50%;
+}
+.travel
+{
+	height:40%;
+	width:100%;
+}
+
+
+.flechoose
+{
+    margin-left:50%;
+    width:20%;
+    
+}
+.planner
+{
+    width:100%;
+}
+.plan
+{
+    width:100%;
+    border:1px solid black;
+}
+.row
+{
+    width:70%;
+    margin:10%;
+}
+.col{
+    width:25%;
+    overflow-y:scroll;
+    text-align:center;
+    height:50%;
+}
+.sidebar1
+{
+  
+  padding-top: 0%;
+  width: 20%;
+  background-color: #ffffff;
+  font-size:1.2vw;
+  position: absolute;
+  height: 80%;
+  overflow-x:hidden;
+  
+  top: 15%;
+  left: 0;
+  
+}
+
+/* Sidebar links */
+.sidebar1 a 
+{
+  display: block;
+  color: black;
+  padding: 5%;
+  text-decoration: none;
+  font-size:125%;
+}
+
+/* Active/current link */
+.sidebar1 a.active1
+{
+  background-color: lightseagreen;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar1 a:hover:not(.active1) ,.dropdown-btn1:hover
+{
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.content 
+{
+   overflow-x: hidden;
+   z-index: 1;
+  margin:0% 25%;
+  font-size : 2vw;
+  top :20%;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px)
+{
+  .sidebar1 {padding-top: 15px;}
+  .sidebar1 a 
+  {
+    text-align: center;
+    float: none;
+  }
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+/* Style the sidenav links and the dropdown button */
+
+.sidebar1 button {
+  text-decoration: none;
+  font-size: 125%;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  padding:5%;
+}
+/* On mouse-over */
+
+
+.sidebar1 div {
+  display: none;
+  background-color: whitesmoke;
+  padding-left: 0;
+  font-size:80%;
+  
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 0;
+}

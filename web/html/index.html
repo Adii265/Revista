@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Revista</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="..\bootstrap\bootstrap.min.css">
+        <link rel="stylesheet" href="..\bootstrap\font-awesome.min.css">
+        <link rel="stylesheet" href="..\css\Main_menu.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" type="text/css"/>
+
+        <script src="..\bootstrap\jquery.min.js"></script>
+        <script src="..\bootstrap\bootstrap.min.js"></script>
+        <script type = "text/javascript" src = "..\javascript\loginscript.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!Vedio>
+	<div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="..\images\final.mp4"></iframe>
+        </div>
+        <br>
+        <!nav-bar-affix>
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" id ="top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="..\html\index.html" style = "color:white">Revista</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <!-- Trigger the modal with a button -->
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mymodal">signup</button>
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mymodal">Login</button>
+                                <!-- Modal -->
+                                <div id="mymodal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Entry is from here!</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a data-toggle="tab" href="#home">SignUp</a></li>
+                                                    <li><a data-toggle="tab" href="#menu1">SignIn</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div id="home" class="tab-pane fade in active">
+                                                        <form class="form-horizontal" onsubmit = "return validsignup()" method = "post" name = "signupform" action = "../jspfiles/login.jsp">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="name">Name:</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control" id="name" placeholder="Enter name" name="sname">
+                                                                    </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="penname">Pen Name(optional):</label>
+                                                                    <div class="col-sm-10">          
+                                                                        <input type="text" class="form-control" id="penname" placeholder="Enter Pen Name" name="penname">
+                                                                    </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="age">Date of Birth:</label>
+                                                                <div class="col-sm-10">         
+                                                                    <input type="date" class="form-control" id="age" placeholder="Enter age" name="age">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                                                <div class="col-sm-10">          
+                                                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="mail">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="phone">Phone No.:</label>
+                                                                <div class="col-sm-10">          
+                                                                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="add">Address:</label>
+                                                                <div class="col-sm-10">          
+                                                                    <input type="text" class="form-control" id="add" placeholder="Enter address" name="add">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                                                <div class="col-sm-10">          
+                                                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="pwd1">Re-Enter Password:</label>
+                                                                <div class="col-sm-10">          
+                                                                    <input type="password" class="form-control" id="pwd1" placeholder="Re-Enter password" name="pwd1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">        
+                                                                <div class="col-sm-offset-2 col-sm-10">
+                                                                    <div class="checkbox">
+                                                                        <label><input type="checkbox" name="remember"> Remember me</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">        
+                                                                <div class="col-sm-offset-2 col-sm-10">
+                                                                    <button type="submit" class="btn btn-default">Submit</button>
+                                                                    <button type="reset" class="btn btn-default">Reset</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div id="menu1" class="tab-pane fade">
+                                                        <form class="form-horizontal" id = "login" action="..\jspfiles\login_password.jsp" name = "signinform" method = "post" onsubmit = "return validsignin()">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                                                <div class="col-sm-10">          
+                                                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">        
+                                                                <div class="col-sm-offset-2 col-sm-10">
+                                                                    <div class="checkbox">
+                                                                        <label><input type="checkbox" name="remember"> Remember me</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">        
+                                                                <div class="col-sm-offset-2 col-sm-10">
+                                                                    <button type="submit" class="btn btn-default">Submit</button>
+                                                                    <a href ="../jspfiles/forgeTpassword.jsp">Forget Password?</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>  
+        <br><br><hr>
+   
+        <!Image>
+	<table class ="profile">
+            <tr class = "profout">
+                <th id ="text_image_th" colspan="3">
+                    <p id = "text_image">What are you writng for?</p>
+                </th>
+            </tr>
+            <tr class = "profout">
+                <td id ="text_image_th" colspan="3">
+                    <p id = "text_image_body">Whether you’re looking for a tool to record your daily emotions and activities in a reflective diary, keep track of appoinments, notes or reminders in a formal diary, or even record your travel insights in a travel diary, <i>Revista</i> has you covered.</p>
+                    <p id = "text_image_body"><i><b>Revista</b></i> gives you all the tools you need to focus on the ideas you want to preserve, rather than the process of writing itself.</p>
+                </td>
+            </tr></table>
+        <div class = "row">
+            <div class = "column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src= "..\images\diary21.jpg" class = "img-circle" alt="Journal" data-toggle="tooltip" title="Perosnal Diary">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Personal Diary</h1> 
+                            <p>Wanna remember some incident?</p> 
+                            <p>Wanna write the feeling somewhere safe?</p>
+                            <p>Wanna be a writer?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class ="column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="..\images\diary21.jpg" class="img-circle" alt="Personal" data-toggle="tooltip" title="Buisness Diary">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Business Memorandum</h1> 
+                            <p>Wanna keep a track of appoinments?</p> 
+                            <p>Wanna add notes of work?</p>
+                            <p>Wanna write a reminder for yourself?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class= "column">   
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="..\images\diary21.jpg" class="img-circle" alt="Buisness" data-toggle="tooltip" title="Travel and blog">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Travel and Blog</h1> 
+                            <p>Wanna keep track of every place you visited?</p> 
+                            <p>Wanna store your memories somewhere?</p>
+                            <p>Wanna create a collection of places to visit?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>		
+        <hr><br><br>
+        <!Corousel>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="..\images\february.jpg" alt="Personal" style="width:100%;height:500px;">
+                </div>
+                <div class="item">
+                    <img src="..\images\march.jpg" alt="Official" style="width:100%;height:500px;">
+                </div>
+                <div class="item">
+                    <img src="..\images\june.jpg" alt="Meetings and Tourism" style="width:100%;height:500px;">
+                </div>
+                <div class="item">
+                    <img src="..\images\july.jpg" alt="Meetings and Tourism" style="width:100%;height:500px;">
+                </div>
+                <div class="item">
+                    <img src="..\images\september.jpg" alt="Meetings and Tourism" style="width:100%;height:500px;">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br><br><hr><br><br>
+        <!icons>
+        <table class = "icons">
+            <tr class = "icons_row">
+                <td class= "icons_col">
+                    <div class="card">
+                        <div id = "cardimage">
+                            <img src="..\images\lock3.png" alt="lock" style="width:100%">
+                        </div>
+                        <div id = "cardcon">
+                            <h2>100% Private</h2>
+                            <p style="text-align:center">Designed to focus on privacy, your entries are totally private by default!</p>
+                        </div>
+                    </div>
+                </td>
+                <td class= "icons_col">
+                    <div class="card">
+                        <div id = "cardimage">
+                            <img src="..\images\phone2.png" alt="phone" style="width:100%">
+                        </div>
+                        <div id = "cardcon">
+                            <h2>100% Private</h2>
+                            <p style="text-align:center">Designed to focus on privacy, your entries are totally private by default!</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class = "icons_row">
+                <td class= "icons_col">
+                    <div class="card">
+                        <div id = "cardimage">
+                            <img src="..\images\pen3.png" alt="Pen" style="width:100%">
+                        </div>
+                        <div id = "cardcon">
+                            <h2>100% Private</h2>
+                            <p style="text-align:center">Designed to focus on privacy, your entries are totally private by default!</p>
+                        </div>
+                    </div>
+                </td>
+                <td class= "icons_col">
+                    <div class="card">
+                        <div id = "cardimage">
+                            <img src="..\images\search1.png" alt="search" style="width:100%">
+                        </div>
+                        <div id = "cardcon">
+                            <h2>100% Private</h2>
+                            <p style="text-align:center">Designed to focus on privacy, your entries are totally private by default!</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!Jumbotron>
+        <div class="jumbotron" style= "text-align:center">
+            <h1>Ready to start Writing? Sign up now!</h1> 
+            <button><a href = "#myNavbar">Sign up</a></button>
+        </div>
+        <!Footer>
+            <div class="container" id="foot">
+                <div class="col-md-12">
+                    <center><h4 style="font-family:Courier">The site is copyright and found guilty will need to plead in the high authorities.</h4></center></br></br>
+                </div>
+                <div  id="foot">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <b style="font-family:Courier;color:black">Contact Us:</b>
+  			<br><br>
+  			<span class="glyphicon glyphicon-phone-alt"> +918888888888</span>
+  			<br><br>
+  			<span class="glyphicon glyphicon-envelope"> revista298@gmail.com</span> 
+  			<br><br>
+  			<span class="glyphicon glyphicon-home"> Rewadi road,New Delhi.</span> 
+  			<br><br>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <b style="font-family:Courier;color:black">Follow Us:</b>
+                        <br><br>
+                        <span class="glyphicon glyphicon-thumbs-up"> Facebook</span><br><br>
+                        <span class="glyphicon glyphicon-camera"> Instagram</span><br><br>
+                        <span class="glyphicon glyphicon-globe"> Google+</span><br><br>
+                        <br>
+                    </div>
+                </div>		
+  		<br><br><br><br><br><br>
+            </div>	
+    </body>
+</html>

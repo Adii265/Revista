@@ -1,0 +1,104 @@
+<%@page import = "java.sql.*" contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planner</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="..\bootstrap\bootstrap.min.css">
+    <link rel="stylesheet" href="..\css\user_edit.css">
+    <script src="..\bootstrap\jquery.min.js"></script>
+    <script src="..\bootstrap\bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class = "container">
+      <br><br>
+      <div class = "user">
+        Hello Mr/Ms/Mrs. 
+        <%
+            String name = request.getParameter("email1");
+            out.print(name);
+        %>
+      </div>
+      <hr>
+        <h3 style="text-align:center">Your planner for the year _________:</h3>
+      <hr>
+      <div class = "planner">
+        <table class = "plan">
+          <tr class = "row">
+            <td class = "col">
+              <!--on clicking go to the respective saved page of the month-->
+              <h2>January</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>February</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>March</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>April</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+          </tr>
+          <tr class = "row">
+            <td class = "col">
+              <h2>May</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>June</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>July</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>August</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+          </tr>
+          <tr class = "row">
+            <td class = "col">
+              <h2>September</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>October</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>November</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+            <td class = "col">
+              <h2>December</h2>
+              <textarea cols = "25%" maxlength = "100" name = "Months" rows = "10" wrap = "soft">
+              </textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class= "buttons">
+        <input type = "button" name = "save" value = "Save" style = "margin-right:5%">
+        <input type = "button" name = "reset" value = "Reset" style = "margin-right:10%">
+      </div>
+      <br><br><hr>
+    </div>
+  </body>
+</html>
